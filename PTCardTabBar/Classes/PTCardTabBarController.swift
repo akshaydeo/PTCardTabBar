@@ -53,7 +53,7 @@ open class PTCardTabBarController: UITabBarController {
     public var tabBarHeight: CGFloat = 70
     public var horizontleSpacing: CGFloat = 20
     
-    func getCustomTabBar() -> PTCardTabBar {
+    open func getCustomTabBar() -> PTCardTabBar {
         return customTabBar
     }
     
