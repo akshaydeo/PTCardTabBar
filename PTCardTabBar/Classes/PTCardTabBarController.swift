@@ -25,7 +25,7 @@ open class PTCardTabBarController: UITabBarController {
         }
     }
     
-    public lazy var customTabBar: PTCardTabBar = {
+    lazy var customTabBar: PTCardTabBar = {
         return PTCardTabBar()
     }()
     
@@ -35,7 +35,7 @@ open class PTCardTabBarController: UITabBarController {
         anotherSmallView.translatesAutoresizingMaskIntoConstraints = false
 
         return anotherSmallView
-    }()
+    }()    
     
     override open var selectedIndex: Int {
         didSet {
@@ -52,6 +52,10 @@ open class PTCardTabBarController: UITabBarController {
     public var bottomSpacing: CGFloat = 20
     public var tabBarHeight: CGFloat = 70
     public var horizontleSpacing: CGFloat = 20
+    
+    func getCustomTabBar() : PTCardTabBar {
+        return customTabBar
+    }
     
     override open func viewDidLoad() {
         super.viewDidLoad()
